@@ -7,7 +7,6 @@
             <a href="/admin/documentation/create" class="btn btn-primary">
                 Add <i class="fa fa-plus"></i>
             </a>
-
         </div>
     </div>
 
@@ -43,7 +42,8 @@
 
                     </td>
                     <td>
-                        <a href="{{ route('documentation.edit', $item->id) }}" class="btn btn-primary">
+                       <div class="d-flex gap-2">
+                            <a href="{{ route('documentation.edit', $item->id) }}" class="btn btn-primary">
                             <i class="fa fa-edit"></i>
                         </a>
                         <form action="/admin/documentation/{{ $item->id }}" method="post">
@@ -53,6 +53,7 @@
                                 <i class="fa fa-trash"></i>
                             </button>
                         </form>
+                       </div>
                     </td>
 
                 </tr>

@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="mb-3">
-        <a href="/admin/documentation" class="link mb-3">
+        <a href="/admin/documentation" class="btn btn-outline-primary mb-3">
             <i class="fa fa-arrow-left" aria-hidden="true"></i> Go Back
         </a>
     </div>
@@ -36,7 +36,7 @@
         </div>
 
         <div class="col-12">
-            <button class="btn btn-primary" type="submit">Submit form</button>
+            <button class="btn btn-primary" type="submit">Submit</button>
         </div>
     </form>
 
@@ -46,11 +46,9 @@
 
     <script>
         tinymce.init({
-
-            selector: '#mytextarea',
-
+                        selector: '#mytextarea',
             plugins: [
-
+'codesample','fullscreen',
                 'a11ychecker', 'advlist', 'advcode', 'advtable', 'autolink', 'checklist', 'export',
 
                 'lists', 'link', 'image', 'charmap', 'preview', 'anchor', 'searchreplace', 'visualblocks',
@@ -59,13 +57,14 @@
                 'wordcount'
 
             ],
-
-            toolbar: 'undo redo | formatpainter casechange blocks | bold italic backcolor | ' +
-
+            toolbar: 'codesample undo redo | formatpainter casechange blocks | bold italic backcolor | ' +
                 'alignleft aligncenter alignright alignjustify | ' +
-
-                'bullist numlist checklist outdent indent | removeformat | a11ycheck code table help'
+                'bullist numlist checklist outdent indent | removeformat | a11ycheck code table help fullscreen'
 
         });
+
+
     </script>
+
+
 @endsection

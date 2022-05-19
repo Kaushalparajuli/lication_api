@@ -65,7 +65,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="container pt-3">
+                    <div class="container pt-3 pb-5">
                         @include('layouts.backend.session')
                         @yield('content')
                     </div>
@@ -86,6 +86,8 @@
             $('.alert').hide();
         }, 3000);
     </script>
+
+
 
 
 

@@ -13,11 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
  */
 
-Auth::routes();
-Route::get('/', function () {
-    return view('welcome');
-});
-
 Route::middleware(['auth'])->prefix('admin')->group(function () {
 
     Route::get('/', [App\Http\Controllers\Backend\DashboardController::class, 'index']);
@@ -25,3 +20,6 @@ Route::middleware(['auth'])->prefix('admin')->group(function () {
     Route::resource('/documentation', App\Http\Controllers\Backend\DocumentationController::class);
 
 });
+
+Auth::routes();
+Route::get('/{slug}', [App\Http\Controllers\Frontend\FrontendController::class, 'index']);

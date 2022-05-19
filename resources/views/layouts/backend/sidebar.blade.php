@@ -29,7 +29,7 @@ $url = Route::current()->getName();
             <a href="/admin/documentation"
                 class="nav-link text-dark  @if ($url == 'documentation.index') active text-white @endif"
                 aria-current="page">
-                <i class="fa-solid fa-coins"></i>
+               <i class="far fa-file-alt"></i>
                 Documentation
             </a>
         </li>
